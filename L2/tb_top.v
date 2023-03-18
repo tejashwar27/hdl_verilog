@@ -1,8 +1,8 @@
 // -------------------------------------------------------
-//  Course: EE705(spring 2021-22)
-//  Project: Image compression and encryption
-//  Description: Top level Tx-Rx testbench
-//  Owner: Tejeshwar Thorawade (214076001)
+//  Course: HDL(2022-23)
+//  Project: AND Gate
+//  Description: Testbench to test and module
+//  Owner: Tejeshwar
 //  Indian Institute of Technology Bombay
 // -------------------------------------------------------
 
