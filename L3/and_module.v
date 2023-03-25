@@ -9,7 +9,8 @@
 module and_module (
     input a,
     input b,
-    output c1, c2
+    output c1, 
+    output c2
 );//{
     assign c1 = a & b; // And of two inputs
     
