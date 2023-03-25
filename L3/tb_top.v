@@ -14,7 +14,7 @@ module tb_top(); //{
 
     reg ra;
     reg rb;
-    wire wc;
+    wire [1:0] wc;
 
     initial begin //{
         $dumpvars();
@@ -32,9 +32,12 @@ module tb_top(); //{
         ra = 1;
         rb = 1;
         #20
+        ra = 0;
+        rb = 1;
+        #20
         $finish;
     end //}
 
-    and_module DUT (.a(ra), .b(rb), .c(wc));
+    and_module DUT (.a(ra), .b(rb), .c1(wc[0]), .c2(wc[1]));
 
 endmodule //}
