@@ -1,7 +1,7 @@
 // -------------------------------------------------------
-//  Course: HDL(2022-23)
-//  Project: 2 to 1 MUX
-//  Description: Testbench to test and module
+//  Courcine: HDL(2022-23)
+//  Project: Full Adder
+//  Description: Testbench template for Full Adder
 //  Owner: Tejeshwar
 //  Indian Institute of Technology Bombay
 // -------------------------------------------------------
@@ -12,19 +12,19 @@ module tb_top(); //{
 
     reg clk    = 0;
 
-    reg ra, rb, rs;
-    wire [1:0]wc;
+    reg ra, rb, rcin;
+    wire wcout, wsum;
 
     // Waveform generation
     initial begin //{
-        $dumpvars();
+        $dumpvarcin();
     end //}
 
     always #10 clk = ~clk; // Clock with 20ns time period
     
     // Input Seq.
     initial begin //{
-        rs = 1; // C = B
+        rcin = 1;
         ra = 0;
         rb = 0;
         #20
@@ -37,7 +37,7 @@ module tb_top(); //{
         ra = 0;
         rb = 1;
         #20
-        rs = 0; // C = A
+        rcin = 0;
         ra = 0;
         rb = 0;
         #20
@@ -53,6 +53,8 @@ module tb_top(); //{
         $finish;
     end //}
 
-    mux21 DUT (.A(ra), .B(rb), .C(wc), .S(rs));
+    // Create a Full Adder instance here
+    // Inputs: ra, rb, rcin
+    // Outputs: wcout, wsum
 
 endmodule //}
