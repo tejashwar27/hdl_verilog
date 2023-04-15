@@ -17,7 +17,7 @@ module tb_top(); //{
 
     // Waveform generation
     initial begin //{
-        $dumpvarcin();
+        $dumpvars();
     end //}
 
     always #10 clk = ~clk; // Clock with 20ns time period
@@ -56,5 +56,7 @@ module tb_top(); //{
     // Create a Full Adder instance here
     // Inputs: ra, rb, rcin
     // Outputs: wcout, wsum
+
+    full_add DUT(.a(ra), .b(rb), .cin(rcin), .cout(wcout), .sum(wsum));
 
 endmodule //}

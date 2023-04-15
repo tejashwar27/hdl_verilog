@@ -19,7 +19,7 @@ module tb_top(); //{
 
     // Waveform generation
     initial begin //{
-        $dumpvarcin();
+        $dumpvars();
     end //}
 
     // always #10 clk = ~clk; // Clock with 20ns time period
